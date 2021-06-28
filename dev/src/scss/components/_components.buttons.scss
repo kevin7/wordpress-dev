@@ -1,0 +1,86 @@
+.c-button {
+  background-color: $color-darker-grey;
+  border:1px solid #000;
+  border-radius:0;
+  font-size:22px;
+  font-family:$font-family-title;
+  color:#fff;
+  padding:14px 35px;
+  display:inline-block;
+  text-decoration:none;
+  font-weight:400;
+  transition:all 350ms ease;
+
+  &:hover {
+    background-color: lighten($color-darker-grey, 15%);
+  }
+
+  &--underline {
+    background-color:transparent;
+    padding:5px 0;
+    border:0;
+    outline:0;
+    border-bottom:3px solid #fff;
+    &:hover {
+      background-color: transparent;
+      border-bottom:3px solid $color-dark-grey;
+    }
+  }
+
+  @include mq($until: tablet) {
+    padding:12px 20px;
+    font-size:18px;
+  }
+
+}
+
+
+html.mobile {
+  .c-link {
+    opacity:1;
+    left:0;
+  }
+}
+
+.c-back,
+.c-link {
+  display:inline-block;
+  position: relative;
+  padding-left:50px;
+  font-size:18px;
+  text-decoration:none;
+  font-style:italic;
+  color:#fff;
+  font-family:$font-family-title;
+  &:hover {
+    color:$color-tertiary;
+  }
+  &:before {
+    content:'';
+    position: absolute;
+    display:inline-block;
+    width: 40px;
+    top:50%;
+    left:0;
+    margin-top:1px;
+    transform:translateY(-50%);
+    height: 1px;
+    z-index: 100;
+    background-color: $color-tertiary;
+  }
+  @include mq($until: mobile) {
+    font-size:16px;
+  }
+}
+
+.c-back {
+  padding-left:40px;
+  &:before {
+    background-image: url(../img/icon-back.svg);
+    background-size: contain;
+    width:28px;
+    height:11px;
+    margin-top:0;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,108 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/**
+ * Simple default styles for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes (see:
+ * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
+ */
+
+// We have all of our heading font sizes defined here. Passing these pixel
+// values into our `inuit-font-size()` mixin will generate a rem-based
+// `font-size` with a pixel fallback, as well as generating a `line-height` that
+// will sit on our baseline grid.
+
+$inuit-font-size-h1:  48px !default;
+$inuit-font-size-h2:  36px !default;
+$inuit-font-size-h3:  28px !default;
+$inuit-font-size-h4:  22px !default;
+$inuit-font-size-h5:  16px !default;
+$inuit-font-size-h6:  10px !default;
+
+h1, .u-h1 {
+  line-height:1.2;
+  font-family:$font-family-title;
+  font-weight:400;
+  @include fluid-type($min-width, $max-width, $inuit-font-size-h1 / 1.5, $inuit-font-size-h1);
+  margin-bottom:20px;
+  &.u-underline {
+    &:after {
+      content: '';
+      display:block;
+      position: relative;
+      margin-top:25px;
+      width:80px;
+      height:4px;
+      background-color: #fff;
+    }
+  }
+}
+
+h2, .u-h2 {
+  line-height:1.2;
+  font-family:$font-family-title;
+  font-weight:400;
+  @include fluid-type($min-width, $max-width, $inuit-font-size-h2 / 1.5, $inuit-font-size-h2);
+  margin-bottom:20px;
+}
+
+h3, .u-h3 {
+  line-height:1.2;
+  font-family:$font-family-title;
+  font-weight:400;
+  @include fluid-type($min-width, $max-width, $inuit-font-size-h3 / 1.5, $inuit-font-size-h3);
+  margin-bottom:20px;
+}
+
+h4, .u-h4 {
+  line-height:1.2;
+  font-family:$font-family-title;
+  font-weight:400;
+  @include fluid-type($min-width, $max-width, $inuit-font-size-h4 / 1.5, $inuit-font-size-h4);
+  margin-bottom:20px;
+}
+
+h5, .u-h5 {
+  font-family:$font-family-main;
+  font-weight:400;
+  @include fluid-type($min-width, $max-width, 14px, $inuit-font-size-h5);
+  margin-bottom:20px;
+}
+
+h6, .u-h6 {
+  font-family:$font-family-main;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  @include fluid-type($min-width, $max-width, 10px, $inuit-font-size-h6);
+  margin-bottom:20px;
+  color:#c9c9c9;
+}
+
+
+.u-link {
+  display:inline-block;
+  font-family:$font-family-title;
+  @include fluid-type($min_width, $max_width, 16px,  18px);
+  color:#fff;
+  font-style:italic;
+  text-decoration:none;
+  &--line {
+    &:before {
+      content:'';
+      position: relative;
+      display:inline-block;
+      width: 30px;
+      top:-5px;
+      height: 1px;
+      z-index: 100;
+      transition:all .5s ease;
+      background-color: $color-tertiary;
+      margin-right:10px;
+    }
+  }
+  &:hover {
+    color:$color-tertiary;
+  }
+}

@@ -1,0 +1,16 @@
+$inuit-wrapper-width: 1260px !default;
+$min_width: 320px !default;
+$max_width: $inuit-wrapper-width;
+$mq-breakpoints: (
+    mobile:  575px,
+    tablet:  767px,
+    desktop: 991px,
+    wide:    1300px,
+
+    // Tweakpoints
+    mobileSmall: 370px,
+    mobileLandscape: 480px,
+    wideUltra: 1600px
+) !default;
+
+//$mq-show-breakpoints: (mobileSmall, mobile, mobileLandscape, tablet, desktop, wide, wideUltra) !default;

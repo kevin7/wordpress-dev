@@ -1,0 +1,31 @@
+// 8pt Grid
+
+$prefix: 'u'; //Point grid
+$size: 8;
+$multiplier: 15;
+
+// Margin
+@for $i from 1 through $multiplier {
+  .#{$prefix}-m-#{$i} {
+    margin: $size * $i+px;
+  }
+  .#{$prefix}-mt-#{$i} {
+    margin-top: $size * $i+px;
+  }
+  .#{$prefix}-mb-#{$i} {
+    margin-bottom: $size * $i+px;
+  }
+}
+
+// Padding
+@for $i from 1 through $multiplier {
+  .#{$prefix}-p-#{$i} {
+    padding: $size * $i+px;
+  }
+  .#{$prefix}-pt-#{$i} {
+    padding-top: $size * $i+px;
+  }
+  .#{$prefix}-pb-#{$i} {
+    padding-bottom: $size * $i+px;
+  }
+}

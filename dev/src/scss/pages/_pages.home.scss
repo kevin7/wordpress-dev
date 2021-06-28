@@ -1,0 +1,12 @@
+#home {
+  
+}
+
+#test {
+  @include inuit-clearfix();
+}
+.test-col {
+  float:left;
+  width:33.33%;
+  padding:50px;
+}

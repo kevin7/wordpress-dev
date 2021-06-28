@@ -1,0 +1,27 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  font-family: $font-family-main;
+  @include fluid-type($min_width, $max_width, 14px, 14px);
+  &.no-scroll {
+    overflow:hidden; 
+  }
+}
+
+a {
+  color:$color-darker-grey;
+  transition:all .5s ease;
+  &:hover {
+    color:$color-grey;
+  }
+}
+
+p {
+  margin-bottom:20px;
+  line-height:1.4;
+  font-size:14px;
+}
+
+#main {
+  overflow:hidden;
+}

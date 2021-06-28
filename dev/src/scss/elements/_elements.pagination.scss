@@ -1,0 +1,32 @@
+nav.pagination {
+  ul {
+    text-align:center;
+    margin:0;
+    padding:0;
+    list-style:none;
+    li {
+      display:inline-block;
+      margin:0 5px;
+    }
+  }
+  span,
+  a {
+    text-align:center;
+    font-weight:500;
+    display:inline-block;
+    margin:0 0px;
+    line-height:1;
+    text-decoration:none;
+    @include fluid-type($min_width, $max_width, 14px, 16px);
+    &.prev,
+    &.next {
+      font-size:14px;
+      border:0;
+    }
+  }
+
+  span {
+    color:$color-tertiary;
+  }
+
+}
